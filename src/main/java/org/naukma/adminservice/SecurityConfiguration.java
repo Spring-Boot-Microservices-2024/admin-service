@@ -17,7 +17,7 @@ public class SecurityConfiguration {
 
     @Bean
     public HttpHeadersProvider customHttpHeadersProvider() {
-        return (instance) -> {
+        return instance -> {
             HttpHeaders httpHeaders = new HttpHeaders();
             httpHeaders.add(authHeader, authKey);
             return httpHeaders;
